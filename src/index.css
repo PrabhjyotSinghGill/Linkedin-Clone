@@ -1,4 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  --google-blue-300: rgb(138, 180, 248);
+  --google-blue-600: rgb(26, 115, 232);
+  --google-blue-700: rgb(25, 103, 210);
 }

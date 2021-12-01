@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import "../views/Feed.css";
 import CreateIcon from '@mui/icons-material/Create';
 import InputOption from "./InputOption.jsx";
@@ -9,7 +9,7 @@ import CalendarViewDayIcon from '@mui/icons-material/CalendarViewDay';
 import Post from "./Post.jsx";
 
 function Feed(){
-    const [posts, setPosts] = useState([])
+    const [posts, setPosts] = useState([]);
 
     const sendPost = e =>{
         e.preventDefault();

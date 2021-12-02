@@ -5,6 +5,7 @@ import Header from './components/Header.jsx';
 import Sidebar from "./components/Sidebar.jsx";
 import Feed from "./components/Feed.jsx";
 import Login from "./components/Login.jsx";
+import { useSelector } from 'react-redux';
 
 function App() {
   const user = useSelector(selectUser);

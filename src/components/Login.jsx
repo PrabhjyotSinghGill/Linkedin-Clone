@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import "../views/Login.css";
 import {auth} from "../firebase.js";
 import {login} from "../features/userSlice.js"
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 function Login(){
     const [name, setName] = useState("");
@@ -13,6 +13,15 @@ function Login(){
 
     const loginToApp=(e)=>{
         e.preventDefault();
+
+        auth.signInWithEmailAndPassword(email,password).then(userAuth => {
+            dispatch(login({
+                email:userAuth.user.email,
+                uid:userAuth.user.uid,
+                displayName: userAuth.user.displayName,
+                profileUrl: userAuth.user.photoURL,
+            }))
+        })
     };
     const register = () => {
         if(!name){

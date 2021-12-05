@@ -9,8 +9,12 @@ import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import EventNoteIcon from '@mui/icons-material/EventNote';
 import CalendarViewDayIcon from '@mui/icons-material/CalendarViewDay';
 import firebase from 'firebase/compat/app';
+import {useSelector} from "react-redux";
+import {selectUser} from "../features/userSlice.js";
+import FlipMove from "react-flip-move";
 
 function Feed(){
+    const user = useSelector(selectUser);
     const [input, setInput] = useState('');
     const [posts, setPosts] = useState([]);
 
@@ -29,10 +33,10 @@ function Feed(){
         e.preventDefault();
 
         db.collection('posts').add({
-            name:'Prabhjyot Singh Gill',
-            description:'This is a Test.',
+            name:user.displayName,
+            description:user.email,
             message:input,
-            photoUrl:'',
+            photoUrl:user.photoUrl || "",
             timestamp:firebase.firestore.FieldValue.serverTimestamp(),
         });
 
@@ -56,6 +60,7 @@ function Feed(){
             </div>
         </div>
         {/*Posts */}
+        <FlipMove>
         {posts.map(({id,data:{name, description,message,photoUrl}}) => (
         <Post 
             key={id}
@@ -63,6 +68,7 @@ function Feed(){
             description={description}
             message={message}
             photoUrl={photoUrl}></Post>))}
+        </FlipMove>
     </div>);
 }
 

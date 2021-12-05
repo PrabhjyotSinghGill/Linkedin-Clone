@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{forwardRef} from 'react';
 import "../views/Post.css";
 import InputOption from './InputOption.jsx';
 import { Avatar } from '@mui/material';
@@ -7,10 +7,11 @@ import ChatIcon from '@mui/icons-material/Chat';
 import SendIcon from '@mui/icons-material/Send';
 import ShareIcon from '@mui/icons-material/Share';
 
-function Post({name,description,message,photoUrl}){
-return(<div className="post">
+
+const Post = forwardRef(({name,description,message,photoUrl},ref)=>{
+return(<div ref={ref} className="post">
     <div className="post__header">
-        <Avatar src={photoUrl}></Avatar>
+        <Avatar src={photoUrl}>{name[0]}</Avatar>
         <div className="post__info">
             <h2>{name}</h2>
             <p>{description}</p>
@@ -26,6 +27,6 @@ return(<div className="post">
         <InputOption Icon={SendIcon} title="Send" color="gray"></InputOption>
     </div>
 </div>);
-}
+})
 
 export default Post

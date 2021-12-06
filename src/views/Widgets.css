@@ -15,6 +15,12 @@
   justify-content: space-between;
   padding: 10px;
 }
+.widgets__header > h2 {
+  color: #0a66c2;
+}
+.widgets__header > .MuiSvgIcon-root {
+  color: #0a66c2;
+}
 
 .widgets__header > h2 {
   font-size: 16px;

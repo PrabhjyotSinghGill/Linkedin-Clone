@@ -20,15 +20,11 @@ function Widgets(){
             <h2>LinkedIn News</h2>
             <InfoIcon></InfoIcon>
         </div>
-        {newsArticle("PAPA React","Top News - 9099 readers")}
-        {newsArticle("PAPA React","Top News - 9099 readers")}
-        {newsArticle("PAPA React","Top News - 9099 readers")}
-        {newsArticle("PAPA React","Top News - 9099 readers")}
-        {newsArticle("PAPA React","Top News - 9099 readers")}
-        {newsArticle("PAPA React","Top News - 9099 readers")}
-        {newsArticle("PAPA React","Top News - 9099 readers")}
-        {newsArticle("PAPA React","Top News - 9099 readers")}
-        {newsArticle("PAPA React","Top News - 9099 readers")}
+        {newsArticle("Software Developer, Early Career"," Google - Mountain View CA ")}
+        {newsArticle("FrontEnd Software Developer"," Apple - Palo Alto CA ")}
+        {newsArticle("Web Application Developer"," McGill University - Montreal QC ")}
+        {newsArticle("Python Developer"," ScotiaBank - Ottawa ON ")}
+        {newsArticle("BackEnd Software Developer"," Bell - Montreal QC ")}
     </div>
 }
 export default Widgets

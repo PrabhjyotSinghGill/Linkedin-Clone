@@ -34,17 +34,13 @@ function App() {
 
   return (
     <div className="app">
-      <Header></Header>
-      {/*Login Page */}
+      {user ? (<Header></Header>):(<></>)}
       {!user ? (
         <Login></Login>
       ) : (
         <div className="app__body">
-          {/*Sidebar*/}
           <Sidebar></Sidebar>
-          {/*Feed*/}
           <Feed></Feed>
-          {/*Widgets*/}
           <Widgets></Widgets>
         </div>
       )}

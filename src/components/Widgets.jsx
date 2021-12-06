@@ -21,10 +21,13 @@ function Widgets(){
             <InfoIcon></InfoIcon>
         </div>
         {newsArticle("Software Developer, Early Career"," Google - Mountain View CA ")}
-        {newsArticle("FrontEnd Software Developer"," Apple - Palo Alto CA ")}
-        {newsArticle("Web Application Developer"," McGill University - Montreal QC ")}
-        {newsArticle("Python Developer"," ScotiaBank - Ottawa ON ")}
-        {newsArticle("BackEnd Software Developer"," Bell - Montreal QC ")}
+        {newsArticle("FrontEnd Software Developer"," Apple - Palo Alto CA, USA")}
+        {newsArticle("Web Application Developer"," McGill University - Montreal QC, CA ")}
+        {newsArticle("Python Developer"," ScotiaBank - Ottawa ON,CA ")}
+        {newsArticle("BackEnd Software Developer"," Bell - Montreal QC, CA ")}
+        {newsArticle("UE4 Game Developer"," Qualcomm - San Diego CA, USA ")}
+        {newsArticle("Developer Relations"," Oculus VR - Los Angeles CA, USA ")}
+        {newsArticle("Software Developer Intern"," General Atomics Aeronautical Systems - San Diego CA, USA ")}
     </div>
 }
 export default Widgets

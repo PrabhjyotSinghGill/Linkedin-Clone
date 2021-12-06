@@ -35,11 +35,20 @@ function Sidebar(){
         </div>
         <div className="sidebar__bottom">
             <p>Recent</p>
-            {recentItem('reactjs')}
-            {recentItem('programming')}
-            {recentItem('softwareengineering')}
-            {recentItem('design')}
-            {recentItem('developer')}
+            {recentItem('ArtificialIntelligence')}
+            {recentItem('ComputationalComplexity')}
+            {recentItem('MachineLearning')}
+            {recentItem('ComputerVisionandPatternRecognition')}
+            {recentItem('CryptographyAndSecurity')}
+            {recentItem('DigitalLibraries ')}
+            {recentItem('Distributed,Parallel,ClusterComputing ')}
+            {recentItem('Automata Theory')}
+            {recentItem('HumanComputerInteraction')}
+            {recentItem('NeuralAndEvolutionaryComputing')}
+            {recentItem('NetworkingAndInternetArchitecture')}
+            {recentItem('Robotics')}
+            {recentItem('Operating Systems')}
+            {recentItem('Symbolic Computation')}
         </div>
     </div>);
 }
